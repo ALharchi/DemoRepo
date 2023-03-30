@@ -9,6 +9,8 @@ def CurveBoundingBox():
     # Validate selection
     curve = rhobject.Curve()
     if not curve: return
+
+    #changes changes
  
     curve = rg.Distance(pt1, pt2)
  
