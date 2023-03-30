@@ -10,6 +10,7 @@ def CurveBoundingBox():
     curve = rhobject.Curve()
     if not curve: return
  
+    curve = rg.Distance(pt1, pt2)
  
     # Compute the tight bounding box of the curve in world coordinates
     bbox = curve.GetBoundingBox(True)
