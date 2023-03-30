@@ -11,6 +11,7 @@ def CurveBoundingBox():
     if not curve: return
 
     #changes changes
+    #sdfsdf
  
     curve = rg.Distance(pt1, pt2)
  
