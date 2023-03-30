@@ -10,10 +10,6 @@ def CurveBoundingBox():
     curve = rhobject.Curve()
     if not curve: return
  
-    ## Get the active view's construction plane
-    view = scriptcontext.doc.Views.ActiveView
-    if not view: return
-    plane = view.ActiveViewport.ConstructionPlane()
  
     # Compute the tight bounding box of the curve in world coordinates
     bbox = curve.GetBoundingBox(True)
@@ -23,6 +19,11 @@ def CurveBoundingBox():
     print "World min:", bbox.Min
     print "World max:", bbox.Max
  
+     
+    Rhino.Geometry.Plane plane;
+    if( !base_curve.TryGetPlane(out plane) )
+      return Rhino.Commands.Result.Cancel;
+
     # Compute the tight bounding box of the curve based on the
     # active view's construction plane
     bbox = curve.GetBoundingBox(plane)
