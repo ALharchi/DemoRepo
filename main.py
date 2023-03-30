@@ -37,9 +37,13 @@ def CurveBoundingBox():
     print "CPlane max:", bbox.Max
  
 if __name__=="__main__":
+<<<<<<< Updated upstream
     CurveBoundingBox()
 
 
 
 
     Yo!  123
+=======
+    CurveBoundingBox()
+>>>>>>> Stashed changes
